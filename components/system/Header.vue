@@ -28,7 +28,7 @@ export default {
    data() {
     return {
       links: [
-        {title: 'Домой', url:'/'},
+        {title: 'Домой', url:'/blog'},
         {title: 'О блоге', url:'/about'},
       ]
     }
