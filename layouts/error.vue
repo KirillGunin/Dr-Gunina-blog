@@ -1,4 +1,4 @@
-<!-- этот layout    Nuxt.js автоматически понимает как layout ошибки 404 -->
+<!-- этот layout   Nuxt.js автоматически понимает как layout ошибки 404 -->
 <template>
   <section class="not-found">
     
