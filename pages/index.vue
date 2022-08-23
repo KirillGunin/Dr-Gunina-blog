@@ -1,16 +1,16 @@
-<!-- это страница приложения как App.js -->
+<!-- это главная страница приложения как App.js -->
 
 <template>
 
   <div class="wrapper-content wrapper-content--fixed">
     <div class="container">
       <promo />
-      <intro class="intro" title="My last posts:" />
+      <Intro class="intro" title="My last posts:" />
     </div>
 
 
     <!-- posts -->
-    <postsList :posts="posts" />
+    <PostsList :posts="posts" />
 
   </div>
 
@@ -18,17 +18,17 @@
 
 <script>
 import promo from '@/components/Promo.vue'
-import intro from '@/components/UI/Intro.vue'
-import postsList from '@/components/Blog/PostsList.vue'
+// import intro from '@/components/UI/Intro.vue' // мы его используем глобально через app-components.js
+// import postsList from '@/components/Blog/PostsList.vue'
 
 export default {
-  components: { promo, intro, postsList },
+  components: { promo },
   data() {
     return {
       posts: [
         {
         id: 1,
-        title: 'Небезопасне игрышки',
+        title: 'Небезопасне игрушки',
         descr: 'Надеюсь все уже знают о случаях некроза кишечника из-за проглатывания магнитных шариков. Всё дело в том, что они могут примагничиваться друг к другу в разных отделах кишечника и приводить к затруднению питания тканей, а затем и к отмиранию (некрозу). Это жизнеугрожающее состояние!',
         img: 'https://sun9-5.userapi.com/impg/AoFNcllGDsB7A28KuCYQhQpaf9etRErmIb4iGg/SDb5wL13Zvo.jpg?size=1080x1080&quality=95&sign=860603878709d1da8110729d8bd0cc94&type=album',
         likes: 432,
