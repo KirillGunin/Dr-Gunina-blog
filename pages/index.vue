@@ -1,16 +1,16 @@
-<!-- это страница приложения как App.js -->
+<!-- это главная страница приложения как App.js -->
 
 <template>
 
   <div class="wrapper-content wrapper-content--fixed">
     <div class="container">
       <promo />
-      <intro class="intro" title="My last posts:" />
+      <Intro class="intro" title="My last posts:" />
     </div>
 
 
     <!-- posts -->
-    <postsList :posts="posts" />
+    <PostsList :posts="posts" />
 
   </div>
 
@@ -18,11 +18,11 @@
 
 <script>
 import promo from '@/components/Promo.vue'
-import intro from '@/components/UI/Intro.vue'
-import postsList from '@/components/Blog/PostsList.vue'
+// import intro from '@/components/UI/Intro.vue' // мы его используем глобально через app-components.js
+// import postsList from '@/components/Blog/PostsList.vue'
 
 export default {
-  components: { promo, intro, postsList },
+  components: { promo },
   data() {
     return {
       posts: [
