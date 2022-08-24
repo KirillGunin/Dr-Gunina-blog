@@ -18,13 +18,19 @@
 
 <script>
 export default {
+  props: {
+    postEdit: {
+      type: Object,
+      required: false
+    }
+  },
   data() {
     return {
-      post: {
+      post: this.postEdit ? {...this.postEdit} : { // если есть this.postEdit, nj покажи текущие значения
         title: '',
         content: '',
         img: ''
-      }
+      } // если нет, то покажи значения пустыми
     }
   },
   methods: {

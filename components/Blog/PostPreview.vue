@@ -1,5 +1,6 @@
+<!-- за :to="getLink" будет следить computed -->
 <template>
-  <nuxt-link :to="/blog/+post.id" class="post-preview">
+  <nuxt-link :to="getLink" class="post-preview">
     <img :src="post.img" :alt="post.title">
     <div class="post-content">
       <h3 class="title"> {{ post.title }}</h3>
@@ -19,6 +20,15 @@ export default {
     post: {
       type: Object,
       required: true
+    },
+    admin: {
+      type: Boolean,
+      require: false
+    }
+  },
+  computed: {
+    getLink() { // следит есть админ или нет
+      return this.admin ? `/admin/${this.post.id}` : `/blog/${this.post.id}`
     }
   }
 }
