@@ -6,24 +6,27 @@
 </template>
 
 <script>
+import axios from 'axios'
 import newPostForm from '@/components/Admin/NewPostForm.vue'
 export default {
   components: { newPostForm },
   layout: 'admin',
-  data() {
-    return {
-      post: {
-        id: 1,
-        title: 'Небезопасные игрушки',
-        img: 'https://sun9-5.userapi.com/impg/AoFNcllGDsB7A28KuCYQhQpaf9etRErmIb4iGg/SDb5wL13Zvo.jpg?size=1080x1080&quality=95&sign=860603878709d1da8110729d8bd0cc94&type=album',
-        content: 'Надеюсь все уже знают о случаях некроза кишечника из-за проглатывания магнитных шариков. Всё дело в том, что они могут примагничиваться друг к другу в разных отделах кишечника и приводить к затруднению питания тканей, а затем и к отмиранию (некрозу). Это жизнеугрожающее состояние!',
-      }
-    }
+   asyncData(context) { // эту дату используем в nuxt.js
+    return axios.get(`https://blog-a4098-default-rtdb.firebaseio.com/posts/${context.params.postId}.json`)
+      .then(res => {
+        return {
+          post: {...res.data, id: context.params.postId}
+        }
+      })
+    .catch(error => context.error(error))
   },
   methods: {
     onSubmit(post) {
       console.log('Post Editing')
-      console.log(post)
+      this.$store.dispatch('editPost', post)
+        .then(() => {
+          this.$router.push('/admin')
+        })
     }
   }
 }
