@@ -1,11 +1,9 @@
 <template>
 
   <div class="wrapper-content wrapper-content--fixed">
-    <div class="container">
-      <Intro
-        class="intro"
-        title="My posts:" />
-    </div>
+    <Intro
+      class="intro"
+      title="My posts:" />
 
     <!-- posts -->
     <PostsList :posts="posts" />

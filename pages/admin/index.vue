@@ -1,8 +1,6 @@
 <template>
-
-    <!-- posts -->
-    <PostsList :admin=true :posts="posts" />
-
+  <!-- posts -->
+  <PostsList :admin=true :posts="posts" />
 </template>
 
 <script>

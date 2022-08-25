@@ -17,6 +17,7 @@
 <script>
 import Header from '~/components/system/Header.vue'
 export default {
-  components: { Header }
+  components: { Header },
+  middleware: ['auth'] // так мы обращаемся к нужному файлу в папке
 }
 </script>
