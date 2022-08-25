@@ -2,14 +2,11 @@
   <section class="post-list">
     <div class="container">
       <div class="posts__wrapper">
-
-        <!-- {{ posts }} -->
         <!-- это мы прошли по массиву posts и передаем пост каждый PostPreview :post="post"-->
         <postPreview
-          v-for="post in posts"
-          :key="post.id"
+          v-for="post in posts" :key="post.id"
+          :admin="admin"
           :post="post" />
-
       </div>
     </div>
   </section>
@@ -17,13 +14,16 @@
 
 <script>
 import postPreview from '@/components/Blog/PostPreview.vue'
-
 export default {
   components: { postPreview },
   props: {
     posts: {
       type: Array,
       required: true
+    },
+    admin: {
+      type: Boolean,
+      default: false
     }
   }
 }
