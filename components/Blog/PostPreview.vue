@@ -1,15 +1,11 @@
+<!-- Это превьюшка одного поста -->
 <!-- за :to="getLink" будет следить computed -->
 <template>
   <nuxt-link :to="getLink" class="post-preview">
     <img :src="post.img" :alt="post.title">
     <div class="post-content">
       <h3 class="title"> {{ post.title }}</h3>
-        <!-- <div class="likes">
-          <p>👍</p>
-          <h4>{{ post.likes }}</h4>
-        </div> -->
-
-        <!-- <p>{{ post.descr }}</p> -->
+      <!-- <span v-if="admin" @click="deletePost(post.id)" class="link">Удалить пост</span> -->
     </div>
   </nuxt-link>
 </template>
@@ -49,14 +45,5 @@ export default {
       color: black
     }
   }
-}
-
-.likes {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #e8e3e3;
-  width: 80px;
-  border-radius: 25px;
 }
 </style>

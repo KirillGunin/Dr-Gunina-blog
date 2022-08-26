@@ -3,7 +3,7 @@
 <template>
   
   <section class="post">
-    <div class="contaiber">
+    <div class="container">
       
       <!-- header -->
       <div class="post-header">
