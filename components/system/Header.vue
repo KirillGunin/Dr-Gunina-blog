@@ -7,7 +7,11 @@
       <div class="container">
         <div class="navbar-content">
 
-          <div class="logo">Dr. Gunina</div>
+          <div class="logo">
+            <img class="logoIMG" src="@/assets/logo.png">
+            <p>Dr. Gunina</p>
+          </div>
+
           <ul class="navbar-list">
             <!-- пройдем по массиву links указанному в экспорте -->
             <li class="navbar-item" v-for="link in links" :key="link.title">
@@ -43,5 +47,16 @@ export default {
     color: #f08c22;
   }
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+    .logoIMG {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+}
+
 
 </style>
