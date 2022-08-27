@@ -22,6 +22,9 @@ export const mutations = {
   },
   setToken(state, token) {
     state.token = token
+  },
+  destroyToken(state) {
+    state.token = null
   }
 }
 
@@ -52,6 +55,9 @@ export const actions = {
       commit('setToken', res.data.idToken)
     })
     .catch(error => console.log(error))
+  },
+  logoutUser({commit}) {
+    commit('destroyToken')
   },
   // добавление поста
   addPost({commit}, post) { // связываем с файлом page/admin/new-post/index.vue
