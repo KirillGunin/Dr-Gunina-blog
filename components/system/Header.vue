@@ -34,6 +34,7 @@ export default {
       links: [
         {title: 'Домой', url:'/blog'},
         {title: 'О блоге', url:'/about'},
+        {title: 'Админ', url: '/admin/auth'}
       ]
     }
   }
