@@ -3,7 +3,8 @@ import axios from "axios";
 
 // функции
 export const state = () => ({
-  postsLoaded: []
+  postsLoaded: [],
+  token: null,
 })
 
 // обычный объект
@@ -18,6 +19,12 @@ export const mutations = {
   editPost(state, postEdit) {
     const postIndex = state.postsLoaded.findIndex(post => post.id === postEdit.id)
     state.postsLoaded[postIndex] = postEdit // postIndex приравняем к postEdit
+  },
+  setToken(state, token) {
+    state.token = token
+  },
+  destroyToken(state) {
+    state.token = null
   }
 }
 
@@ -37,6 +44,21 @@ export const actions = {
       })
       .catch(error => console.log(error))
   },
+  authUser({commit}, authData) {
+    const authKey = 'AIzaSyC5RIB3inFX6m-zK2Rsy3Hblh0xdOP-_gQ'
+    return axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${authKey}`, {
+      email: authData.email,
+      password: authData.password,
+      returnSecureToken: true
+    })
+    .then((res) => {
+      commit('setToken', res.data.idToken)
+    })
+    .catch(error => console.log(error))
+  },
+  logoutUser({commit}) {
+    commit('destroyToken')
+  },
   // добавление поста
   addPost({commit}, post) { // связываем с файлом page/admin/new-post/index.vue
     // console.log(post)
@@ -48,8 +70,8 @@ export const actions = {
       .catch(error => console.log(error))
   },
   // изменение поста
-  editPost({commit}, post) {
-    return axios.put(`https://blog-a4098-default-rtdb.firebaseio.com/posts/${post.id}.json`, post) // post - это то на что меняем
+  editPost({commit, state}, post) {
+    return axios.put(`https://blog-a4098-default-rtdb.firebaseio.com/posts/${post.id}.json?auth=${state.token}`, post) // post - это то на что меняем
       .then(res => {
         commit('editPost', post)
       })
@@ -60,5 +82,8 @@ export const actions = {
 export const getters = {
   getPostsLoaded(state) {
     return state.postsLoaded
+  },
+  checkAuthUser(state) {
+    return state.token != null
   }
 }
