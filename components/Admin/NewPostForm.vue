@@ -2,14 +2,14 @@
   <section class="new-post">
     <div class="container">
       <!-- если неколько кнопок,то @submit.prevent для всей формы, а действия навешиваем на конкретные кнопки -->
-      <form @submit.prevent>
+      <form @submit.prevent="onSubmit">
         <AppInput v-model="post.img"> Картинка </AppInput>
         <AppInput v-model="post.title"> Заголовок </AppInput>
         <AppTextArea v-model="post.content"> Содержание </AppTextArea>
         <!-- buttons -->
         <div class="controls">
-          <AppButton class="btnDanger" @click="cancel">Отмена</AppButton>
-          <AppButton class="btnPrimary" @click="onSubmit">Сохранить</AppButton>
+          <div class="btn btnDanger" @click="cancel">Отмена</div>
+          <AppButton class="btnPrimary">Сохранить</AppButton>
         </div>
       </form>
     </div>
