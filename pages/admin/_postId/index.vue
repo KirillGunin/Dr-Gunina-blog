@@ -1,15 +1,16 @@
 <!-- это файл редактирования -->
 <template>
-  <newPostForm
+  <editPostForm
   :postEdit="post"
-  @submit="onSubmit"/>
+  @submit="onSubmit"
+  @click="deletePost" />
 </template>
 
 <script>
 import axios from 'axios'
-import newPostForm from '@/components/Admin/NewPostForm.vue'
+import editPostForm from '@/components/Admin/EditPostForm.vue'
 export default {
-  components: { newPostForm },
+  components: { editPostForm },
   layout: 'admin',
    asyncData(context) { // эту дату используем в nuxt.js
     return axios.get(`https://blog-a4098-default-rtdb.firebaseio.com/posts/${context.params.postId}.json`)
@@ -27,6 +28,13 @@ export default {
         .then(() => {
           this.$router.push('/admin')
         })
+    },
+    deletePost(post) {
+      console.log('Post delete')
+      this.$store.dispatch('deletePost', post)
+      .then(() => {
+        this.$router.push('/admin')
+      })
     }
   }
 }

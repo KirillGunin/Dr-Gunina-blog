@@ -20,6 +20,10 @@ export const mutations = {
     const postIndex = state.postsLoaded.findIndex(post => post.id === postEdit.id)
     state.postsLoaded[postIndex] = postEdit // postIndex приравняем к postEdit
   },
+  deletePost(state, postDelete) {
+    const postIndex = state.postsLoaded.findIndex(post => post.id === postDelete.id)
+    state.postsLoaded.splice(postIndex, 1)
+  },
   setToken(state, token) {
     state.token = token
   },
@@ -76,6 +80,14 @@ export const actions = {
         commit('editPost', post)
       })
     .catch(error => console.log(error))
+  },
+  // удаление поста
+  deletePost({commit}, post) {
+    return axios.delete(`https://blog-a4098-default-rtdb.firebaseio.com/posts/${post.id}.json`, post)
+    .then(res => {
+      console.log(res)
+      commit('deletePost', post)
+    })
   }
 }
 
