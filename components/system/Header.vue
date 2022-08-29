@@ -9,7 +9,7 @@
 
           <div class="logo">
             <img class="logoIMG" src="@/assets/logo.png">
-            <p>Dr. Gunina</p>
+            <nuxt-link class="navbar-link" to="/admin/auth">Dr. Gunina</nuxt-link>
           </div>
 
           <ul class="navbar-list">
@@ -34,7 +34,6 @@ export default {
       links: [
         {title: 'Домой', url:'/blog'},
         {title: 'О блоге', url:'/about'},
-        {title: 'Админ', url: '/admin/auth'}
       ]
     }
   }
