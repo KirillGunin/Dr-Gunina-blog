@@ -8,9 +8,13 @@
         <AppTextArea v-model="post.content"> Содержание </AppTextArea>
         <!-- buttons -->
         <div class="controls">
-          <div class="btn btnDanger" @click="cancel">Отмена</div>
-          <div class="btn btnDanger" @click="deletePost">Удалить</div>
-          <AppButton class="btnPrimary">Сохранить</AppButton>
+          <!-- <div class="btn btnDanger" @click="cancel">Отмена</div> -->
+          <img class="svg" @click="cancel" src="@/assets/arrow-svgrepo-com.svg">
+          <!-- <div class="btn btnDanger" @click="deletePost">Удалить</div> -->
+          <img class="svg" @click="deletePost" src="@/assets/cancel-svgrepo-com.svg">
+          <button><img class="svg" @submit="onSubmit" src="@/assets/reload-svgrepo-com.svg"></button>
+          <!-- <img class="svg" @submit="onSubmit" src="@/assets/reload-svgrepo-com.svg"> -->
+
         </div>
       </form>
     </div>
@@ -54,5 +58,19 @@ export default {
 .controls {
   text-align: center;
   margin: 20px 0;
+}
+
+.svg {
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
 }
 </style>

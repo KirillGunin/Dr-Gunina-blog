@@ -7,6 +7,13 @@
           v-for="post in posts" :key="post.id"
           :admin="admin"
           :post="post" />
+        <span v-if="!posts.length">
+          Вообще такого поста нет.
+          <br>
+          Но мы сообщим Вам как только он появиться.
+          <br>
+          <img class="no_posts" src="@/assets/no_posts.png">
+        </span>
       </div>
     </div>
   </section>
@@ -35,5 +42,10 @@ export default {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.no_posts {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
 }
 </style>

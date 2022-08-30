@@ -5,7 +5,6 @@
     <img :src="post.img" :alt="post.title">
     <div class="post-content">
       <h3 class="title"> {{ post.title }}</h3>
-      <!-- <span v-if="admin" @click="deletePost(post.id)" class="link">Удалить пост</span> -->
     </div>
   </nuxt-link>
 </template>
