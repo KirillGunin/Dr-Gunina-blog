@@ -18,6 +18,21 @@ import promo from '@/components/Promo.vue'
 
 export default {
   components: { promo },
+  head() {
+    let title = 'Записки мамы педиатора',
+        content = 'Записки мамы педиатора Юли',
+        type = 'site'
+
+    return {
+      title: title,
+      meta: [
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'description', name: 'description', content: content },
+        { hid: 'og:description', name: 'og:description', content: content },
+        { hid: 'og:type', name: 'og:type', content: type },
+      ]
+    }
+  },
   computed: {
     postsLoaded() {
       return this.$store.getters.getPostsLoaded

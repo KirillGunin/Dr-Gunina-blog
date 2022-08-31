@@ -14,8 +14,26 @@
 
 </template>
 
-<!-- тут вообще пусто тк все импортируем глобально через app-component.js
-даже <script> </script> не нужен -->
+<!-- тут вообще пусто тк все импортируем глобально через app-component.js -->
+<script>
+  export default {
+    head() {
+    let title = 'Обо мне',
+        content = 'qwertyuiop',
+        type = 'site'
+
+    return {
+      title: title,
+      meta: [
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'description', name: 'description', content: content },
+        { hid: 'og:description', name: 'og:description', content: content },
+        { hid: 'og:type', name: 'og:type', content: type },
+      ]
+    }
+  },
+  }
+</script>
 
 <style lang="scss">
 .about {

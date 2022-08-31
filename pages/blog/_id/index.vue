@@ -9,6 +9,24 @@ import axios from 'axios'
 import post from '@/components/Blog/Post.vue' // принимаем Posr.vue
 export default {
   components: { post }, // регистрируем
+  head() { // head понимает контекст поэтому используем this а asyncData не понимает
+    let title = this.post.title,
+        content = this.post.content,
+        img = this.post.img, // будет показывать картинку в социальных сетях когда ссылкой поделятся
+        type = 'article'
+
+    return {
+      title: title,
+      meta: [
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'description', name: 'description', content: content },
+        { hid: 'og:description', name: 'og:description', content: content },
+        { hid: 'og:type', name: 'og:type', content: type },
+        { hid: 'og:img', name: 'og:img', content: img },
+
+      ]
+    }
+  },
   async asyncData(context) {
     let [post] = await Promise.all([
       axios.get(`https://blog-a4098-default-rtdb.firebaseio.com/posts/${context.params.id}.json`)
