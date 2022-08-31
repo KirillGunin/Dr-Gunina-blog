@@ -1,0 +1,17 @@
+<!-- это пример, можно воспользоваться генератором создания карты сайта и вставить сюда -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+      <loc>sitehost</loc>
+      <lastmod>2005-01-01</lastmod>
+  </url>
+  <url>
+      <loc>sitehost/about</loc>
+      <lastmod>2005-01-01</lastmod>
+  </url>
+  <url>
+      <loc>sitehost/blog</loc>
+      <lastmod>2005-01-01</lastmod>
+  </url>
+</urlset>
