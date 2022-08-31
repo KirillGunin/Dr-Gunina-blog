@@ -3,6 +3,7 @@
     <div class="container">
       <!-- если неколько кнопок,то @submit.prevent для всей формы, а действия навешиваем на конкретные кнопки -->
       <form @submit.prevent="onSubmit">
+        
         <AppInput v-model="post.img"> Картинка </AppInput>
         <AppInput v-model="post.img2" :required="false"> Картинка </AppInput>
         <AppInput v-model="post.img3" :required="false"> Картинка </AppInput>
