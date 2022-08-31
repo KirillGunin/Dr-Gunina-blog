@@ -1,18 +1,19 @@
 <template>
-  <div class="wrapper">
-    <Header />
-    <!-- content -->
-    <div class="wrapper-content wrapper-content--fixed">
-      <Intro title="Царь во дворца">
-        <nuxt-link to="/admin" class="link linkWhite">Админ</nuxt-link>
-        <nuxt-link to="/admin/new-post" class="link linkWhite">Новый пост</nuxt-link>
-        <span @click="logoutUser" class="link linkWhite"> Выйти</span>
+  <no-ssr>
+    <div class="wrapper">
+      <Header />
+      <!-- content -->
+      <div class="wrapper-content wrapper-content--fixed">
+        <Intro title="Царь во дворца">
+          <nuxt-link to="/admin" class="link linkWhite">Админ</nuxt-link>
+          <nuxt-link to="/admin/new-post" class="link linkWhite">Новый пост</nuxt-link>
+          <span @click="logoutUser" class="link linkWhite"> Выйти</span>
 
-      </Intro>
-      <nuxt />
+        </Intro>
+        <nuxt />
+      </div>
     </div>
-
-  </div>
+  </no-ssr>
 </template>
 
 <script>
