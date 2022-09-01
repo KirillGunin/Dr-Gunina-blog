@@ -1,5 +1,5 @@
 <template>
-  <no-ssr>
+  <client-only>
     <div class="wrapper">
       <Header />
       <!-- content -->
@@ -13,7 +13,7 @@
         <nuxt />
       </div>
     </div>
-  </no-ssr>
+  </client-only>
 </template>
 
 <script>

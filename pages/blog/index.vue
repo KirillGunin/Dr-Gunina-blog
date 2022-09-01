@@ -3,11 +3,11 @@
   <div class="wrapper-content wrapper-content--fixed">
     <Intro
       class="intro"
-      title="My posts:"
+      title="Все посты:"
       >
+    </Intro>
       <!-- search -->
       <Search :value="search" @search="search = $event"/>
-    </Intro>
 
     <!-- posts -->
     <PostsList :posts="postsLoaded" />
@@ -62,3 +62,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.wrapper-content.wrapper-content--fixed {
+  margin-top: 104px;
+}
+</style>
