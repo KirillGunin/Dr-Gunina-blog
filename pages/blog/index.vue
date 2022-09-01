@@ -21,7 +21,7 @@ import Search from '@/components/Blog/Search.vue'
 export default {
   components: { Search },
   head() {
-    let title = 'Посты',
+    let title = 'Блог',
         content = '',
         type = 'site'
 

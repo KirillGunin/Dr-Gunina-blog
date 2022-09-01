@@ -12,6 +12,26 @@
   </section>
 </template>
 
+<script>
+export default {
+  head() {
+    let title = 'Страница не найдена',
+        content = '',
+        type = 'site'
+
+    return {
+      title: title,
+      meta: [
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'description', name: 'description', content: content },
+        { hid: 'og:description', name: 'og:description', content: content },
+        { hid: 'og:type', name: 'og:type', content: type },
+      ]
+    }
+  },
+}
+</script>
+
 <style lang="scss">
 .not-found__wrapper {
   display: flex;
@@ -19,6 +39,6 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: 80vh;
+  margin: 16em auto 15em;
 }
 </style>
