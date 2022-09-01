@@ -29,8 +29,8 @@ export default {
   color: #ffffff;
   background-color: #e69d4b;
   border-radius: 5px;
-  h1 {
-    font-size: 26px;
+  h2 {
+    font-size: 40px;
   }
 }
 

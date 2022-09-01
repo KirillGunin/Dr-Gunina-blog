@@ -3,11 +3,11 @@
   <div class="wrapper-content wrapper-content--fixed">
     <Intro
       class="intro"
-      title="My posts:"
+      title="Все посты:"
       >
+    </Intro>
       <!-- search -->
       <Search :value="search" @search="search = $event"/>
-    </Intro>
 
     <!-- posts -->
     <PostsList :posts="postsLoaded" />
@@ -20,6 +20,21 @@
 import Search from '@/components/Blog/Search.vue'
 export default {
   components: { Search },
+  head() {
+    let title = 'Посты',
+        content = 'qwertyuiop',
+        type = 'site'
+
+    return {
+      title: title,
+      meta: [
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'description', name: 'description', content: content },
+        { hid: 'og:description', name: 'og:description', content: content },
+        { hid: 'og:type', name: 'og:type', content: type },
+      ]
+    }
+  },
   data() {
     return {
       search: ''
@@ -47,3 +62,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.wrapper-content.wrapper-content--fixed {
+  margin-top: 104px;
+}
+</style>

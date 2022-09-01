@@ -35,13 +35,15 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 svg {
   color: #e4e4e4;
 }
 /* Search */
 .wrapper__search {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 .search {
@@ -65,7 +67,7 @@ input {
   border-radius: 30px;
   color: #909399;
   font-size: 16px;
-  width: 100%;
+  width: 60%;
   height: auto;
 }
 

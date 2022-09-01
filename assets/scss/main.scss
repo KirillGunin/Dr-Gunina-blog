@@ -47,7 +47,7 @@ ul, li {
 
 section, .section {
   position: relative;
-  padding: 40px 0;
+  padding: 24px 0; // было 40px 0
   @media screen and (max-width: $desktopWidth) {
     padding: 36px 0;
   }
@@ -63,7 +63,7 @@ section, .section {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0 auto;
+  margin: 0 60px auto; // было 0 auto
 }
 
 .wrapper-content {
