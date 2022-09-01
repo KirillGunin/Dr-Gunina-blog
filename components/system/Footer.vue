@@ -12,9 +12,9 @@
         </div>
 
         <div>
-          <a  href="https://dr-gunina.ru/"><img title="Книга" class="svg-custom" src="@/assets/book-svgrepo-com.svg"></a>
+          <a href="https://dr-gunina.ru/"><img title="Книга" class="svg-book" src="@/assets/book-svgrepo-com.svg"></a>
           <a href="https://vk.com/drgunina"><img title="ВКонтакте" class="svg" src="@/assets/icons8-vk.svg"></a>
-
+          <a href="https://t.me/drgunina"><img title="Телеграм" class="svg-tg" src="@/assets/icons8-tg.svg"></a>
         </div>
 
       </div>
@@ -37,9 +37,9 @@
 
 .footer-container {
   display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 50px 0 50px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 50px 0 50px;
 }
 
 .footer-item {
@@ -66,11 +66,18 @@
   width: 45px;
 }
 
-.svg-custom {
+.svg-book {
   cursor: pointer;
   border: solid 1px rgb(47, 47, 47);
   border-radius: 60%;
   height: 33px;
   width: 33px;
+  margin: 6px;
+}
+
+.svg-tg {
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
 }
 </style>
