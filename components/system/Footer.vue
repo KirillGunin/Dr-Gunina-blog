@@ -6,14 +6,14 @@
         <div class="footer-item">
           <h2 style="font-weight: 600">Запись на очный приём:</h2>
           <div class="footer-link">
-            <a href="https://www.medicom-plus.ru/sveden/common/g-gatchina-ul-khokhlova-d-8-pom-7n-mts-orlova-roshcha/">Медиком</a>
-            <a href="https://everyday.clinic/">Everyday Clinic</a>
+            <a title="Записаться на приём" href="https://everyday.clinic/">Everyday Clinic</a>
+            <a title="Записаться на приём" href="https://www.medicom-plus.ru/sveden/common/g-gatchina-ul-khokhlova-d-8-pom-7n-mts-orlova-roshcha/">Медиком</a>
           </div>
         </div>
 
         <div>
-          <a  href="https://dr-gunina.ru/"><img class="svg-custom" src="@/assets/book-svgrepo-com.svg"></a>
-          <a href="https://vk.com/drgunina"><img class="svg" src="@/assets/icons8-vk.svg"></a>
+          <a  href="https://dr-gunina.ru/"><img title="Книга" class="svg-custom" src="@/assets/book-svgrepo-com.svg"></a>
+          <a href="https://vk.com/drgunina"><img title="ВКонтакте" class="svg" src="@/assets/icons8-vk.svg"></a>
 
         </div>
 
