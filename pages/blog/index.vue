@@ -22,7 +22,7 @@ export default {
   components: { Search },
   head() {
     let title = 'Посты',
-        content = 'qwertyuiop',
+        content = '',
         type = 'site'
 
     return {

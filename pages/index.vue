@@ -20,7 +20,7 @@ export default {
   components: { promo },
   head() {
     let title = 'Записки мамы педиатора',
-        content = 'Записки мамы педиатора Юли',
+        content = '',
         type = 'site'
 
     return {

@@ -12,7 +12,9 @@
         </div>
 
         <div>
-          <a class="svg" href="https://vk.com/drgunina"><img class="svg" src="@/assets/icons8-vk.svg"></a>
+          <a  href="https://dr-gunina.ru/"><img class="svg-custom" src="@/assets/book-svgrepo-com.svg"></a>
+          <a href="https://vk.com/drgunina"><img class="svg" src="@/assets/icons8-vk.svg"></a>
+
         </div>
 
       </div>
@@ -62,5 +64,13 @@
   cursor: pointer;
   height: 45px;
   width: 45px;
+}
+
+.svg-custom {
+  cursor: pointer;
+  border: solid 1px rgb(47, 47, 47);
+  border-radius: 60%;
+  height: 33px;
+  width: 33px;
 }
 </style>
