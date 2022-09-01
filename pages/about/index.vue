@@ -19,7 +19,7 @@
   export default {
     head() {
     let title = 'Обо мне',
-        content = 'qwertyuiop',
+        content = '',
         type = 'site'
 
     return {
