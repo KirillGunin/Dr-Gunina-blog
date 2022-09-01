@@ -54,7 +54,8 @@ export default {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: 70vh;
+  // height: 70vh;
+  margin: 10em auto 10em;
   input {
     min-width: 400px;
   }
