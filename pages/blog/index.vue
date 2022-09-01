@@ -65,6 +65,6 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper-content.wrapper-content--fixed {
-  margin-top: 104px;
+  margin-top: 108px;
 }
 </style>
