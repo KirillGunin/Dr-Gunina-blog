@@ -12,7 +12,7 @@
         </div>
 
         <div>
-          <p>значок</p>
+          <a class="svg" href="https://vk.com/drgunina"><img class="svg" src="@/assets/icons8-vk.svg"></a>
         </div>
 
       </div>
@@ -56,5 +56,11 @@
     cursor: pointer;
     font-weight: 600;
   }
+}
+
+.svg {
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
 }
 </style>
