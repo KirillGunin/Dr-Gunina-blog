@@ -2,8 +2,7 @@
 <template>
 
   <div class="wrapper-content wrapper-content--fixed">
-    <promo />
-    <Intro class="intro" title="My last posts:" />
+    <Intro class="intro" title="Мои последние посты:" />
 
     <!-- posts -->
     <PostsList :posts="postsLoaded" />
