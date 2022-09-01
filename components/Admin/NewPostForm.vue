@@ -63,6 +63,7 @@ export default {
   cursor: pointer;
   height: 40px;
   width: 40px;
+  margin: 40px;
 }
 
 button {

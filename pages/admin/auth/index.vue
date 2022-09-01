@@ -19,6 +19,21 @@
 
 <script>
 export default {
+  head() {
+    let title = 'Записки мамы педиатора',
+        content = '',
+        type = 'site'
+
+    return {
+      title: title,
+      meta: [
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'description', name: 'description', content: content },
+        { hid: 'og:description', name: 'og:description', content: content },
+        { hid: 'og:type', name: 'og:type', content: type },
+      ]
+    }
+  },
   data() {
     return {
       user: {
@@ -54,7 +69,8 @@ export default {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: 70vh;
+  // height: 70vh;
+  margin: 10em auto 10em;
   input {
     min-width: 400px;
   }
