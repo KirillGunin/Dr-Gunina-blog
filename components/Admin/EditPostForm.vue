@@ -11,16 +11,14 @@
 
         <AppInput v-model="post.title"> Заголовок </AppInput>
         <AppTextArea v-model="post.content"> Содержание </AppTextArea>
+
         <!-- buttons -->
         <div class="controls">
-          <!-- <div class="btn btnDanger" @click="cancel">Отмена</div> -->
           <img class="svg" @click="cancel" src="@/assets/arrow-svgrepo-com.svg">
-          <!-- <div class="btn btnDanger" @click="deletePost">Удалить</div> -->
           <img class="svg" @click="deletePost" src="@/assets/cancel-svgrepo-com.svg">
           <button><img class="svg" @submit="onSubmit" src="@/assets/reload-svgrepo-com.svg"></button>
-          <!-- <img class="svg" @submit="onSubmit" src="@/assets/reload-svgrepo-com.svg"> -->
-
         </div>
+
       </form>
     </div>
   </section>
@@ -39,7 +37,7 @@ export default {
       post: this.postEdit ? {...this.postEdit} : { // если есть this.postEdit, то покажи текущие значения
         title: '',
         content: '',
-        img: ''
+        img: '',
       } // если нет, то покажи значения пустыми
     }
   },
@@ -52,7 +50,6 @@ export default {
      this.$emit('click', this.post)
     },
     onSubmit() {
-      // console.log(this.post)
      this.$emit('submit', this.post) // передаем эмит в new-post index.vue
     }
   }

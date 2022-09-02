@@ -31,6 +31,7 @@
       <!-- body -->
       <div class="post-body">
         <p>{{ post.content }}</p>
+        <p>{{ post.date }}</p>
       </div>
 
     </div>
