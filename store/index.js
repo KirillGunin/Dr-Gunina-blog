@@ -48,9 +48,10 @@ export const actions = {
       })
       .catch(error => console.log(error))
   },
-  authUser({commit}, authData) {
-    const authKey = 'AIzaSyC5RIB3inFX6m-zK2Rsy3Hblh0xdOP-_gQ'
-    return axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${authKey}`, {
+  authUser({commit}, authData, SECRET_KEY) {
+    // const authKey = 'AIzaSyC5RIB3inFX6m-zK2Rsy3Hblh0xdOP-_gQ'
+    SECRET_KEY = process.env.SECRET_KEY
+    return axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${SECRET_KEY}`, {
       email: authData.email,
       password: authData.password,
       returnSecureToken: true

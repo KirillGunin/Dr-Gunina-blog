@@ -42,6 +42,11 @@ export default {
       }
     }
   },
+  computed: {
+    apiKey() {
+      return process.env.SECRET_KEY
+    }
+  },
   methods: {
     onSubmit() {
       this.$store.dispatch('authUser', this.user)
