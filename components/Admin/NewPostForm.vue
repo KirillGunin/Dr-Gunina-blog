@@ -12,9 +12,7 @@
         <AppTextArea v-model="post.content"> Содержание </AppTextArea>
         <!-- buttons -->
         <div class="controls">
-          <!-- <div class="btn btnDanger" @click="cancel">Отмена</div> -->
           <img class="svg" @click="cancel" src="@/assets/arrow-svgrepo-com.svg">
-          <!-- <AppButton class="btnPrimary">Сохранить</AppButton> -->
           <button><img class="svg" @submit="onSubmit" src="@/assets/add-plus-svgrepo-com.svg"></button>
         </div>
       </form>

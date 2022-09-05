@@ -34,7 +34,7 @@ export default {
   },
   computed: {
     postsLoaded() {
-      return this.$store.getters.getPostsLoaded
+      return this.$store.getters.getPostsLoaded.slice(0,3)
     }
   }
 }

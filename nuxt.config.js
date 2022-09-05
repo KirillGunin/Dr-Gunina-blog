@@ -1,3 +1,4 @@
+require('dotenv').config()
 import pkg from './package.json'
 
 export default {
@@ -22,6 +23,11 @@ export default {
     ]
   },
 
+  // Global env
+  env: {
+    SECRET_KEY: process.env.SECRET_KEY
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     { src: '~/assets/scss/main.scss', lang: 'scss' }
@@ -42,6 +48,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/dotenv',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

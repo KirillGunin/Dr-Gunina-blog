@@ -4,7 +4,7 @@
       <Header />
       <!-- content -->
       <div class="wrapper-content wrapper-content--fixed">
-        <Intro title="Царь во дворца">
+        <Intro title="Личный кабинет">
           <nuxt-link to="/admin" class="link linkWhite">Админ</nuxt-link>
           <nuxt-link to="/admin/new-post" class="link linkWhite">Новый пост</nuxt-link>
           <span @click="logoutUser" class="link linkWhite"> Выйти</span>

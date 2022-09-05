@@ -1,4 +1,4 @@
-// это главный файл store
+// главный файл store
 import axios from "axios";
 
 // функции
@@ -13,8 +13,8 @@ export const mutations = {
     state.postsLoaded = posts // все посты
   },
   addPost(state, post) {
-    // console.log(post)
-    state.postsLoaded.push(post)
+    state.postsLoaded.unshift(post)
+    //state.postsLoaded.push(post)
   },
   editPost(state, postEdit) {
     const postIndex = state.postsLoaded.findIndex(post => post.id === postEdit.id)
@@ -44,13 +44,13 @@ export const actions = {
           postsArray.push({ ...res.data[key], id: key })
         }
         // res
-        commit('setPosts', postsArray)
+        commit('setPosts', postsArray.reverse())
       })
       .catch(error => console.log(error))
   },
-  authUser({commit}, authData) {
-    const authKey = 'AIzaSyC5RIB3inFX6m-zK2Rsy3Hblh0xdOP-_gQ'
-    return axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${authKey}`, {
+  authUser({commit}, authData, SECRET_KEY) {
+    SECRET_KEY = process.env.SECRET_KEY
+    return axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${SECRET_KEY}`, {
       email: authData.email,
       password: authData.password,
       returnSecureToken: true
@@ -65,17 +65,19 @@ export const actions = {
   },
   // добавление поста
   addPost({commit}, post) { // связываем с файлом page/admin/new-post/index.vue
-    // console.log(post)
-    return axios.post('https://blog-a4098-default-rtdb.firebaseio.com/posts.json', post) // тут ссылка на бд + posts.json и то, что мы передаем туда
+    const date = new Date(Date.now()).toLocaleString().slice(0, 10) // дата создания
+    return axios.post('https://blog-a4098-default-rtdb.firebaseio.com/posts.json', {...post, date}) // тут ссылка на бд + posts.json и то, что мы передаем туда
       .then(res => {
-        // console.log(res) // посмотрим что приходит в res, чтоб задать id
+         //console.log(res) // посмотрим что приходит в res, чтоб задать id
         commit('addPost', {...post, id: res.data.name}) // создадим мутацию 'addPost' и передадим ей post и id
       })
       .catch(error => console.log(error))
   },
   // изменение поста
   editPost({commit, state}, post) {
-    return axios.put(`https://blog-a4098-default-rtdb.firebaseio.com/posts/${post.id}.json?auth=${state.token}`, post) // post - это то на что меняем
+    // console.log(post, '--------')
+    const date = new Date(Date.now()).toLocaleString().slice(0, 10) // обновленная дата
+    return axios.put(`https://blog-a4098-default-rtdb.firebaseio.com/posts/${post.id}.json?auth=${state.token}`, {...post, date: date}) // отправим post с новой датой
       .then(res => {
         commit('editPost', post)
       })
@@ -85,7 +87,6 @@ export const actions = {
   deletePost({commit}, post) {
     return axios.delete(`https://blog-a4098-default-rtdb.firebaseio.com/posts/${post.id}.json`, post)
     .then(res => {
-      console.log(res)
       commit('deletePost', post)
     })
   }

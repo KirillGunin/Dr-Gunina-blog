@@ -30,7 +30,9 @@
 
       <!-- body -->
       <div class="post-body">
-        <p>{{ post.content }}</p>
+        <p style="white-space: pre-line">{{ post.content }}</p>
+        <br>
+        <p>{{ post.date }}</p>
       </div>
 
     </div>
