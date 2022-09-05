@@ -51,13 +51,6 @@ export default {
         return posts.filter(el => el.title.toLowerCase().includes(search.trim().toLowerCase()))
       }
       return posts
-
-      //if(!search) return posts // если поиск пустой, то вернет полный массив///////////////////////////////////////
-      //if(search) return posts.filter(el => el.title.toLowerCase() === search.toLowerCase()) // этот поиск работает но по целому
-      //if(search) return posts.filter(el => el.title.toLowerCase().indexOf(search.toLowerCase())) // этот работает но исключает то что ищешь
-      
-      // if(search) return posts.filter(el => el.title.toLowerCase().includes(search.toLowerCase())) // этот правильно работает
-
     }
   }
 }

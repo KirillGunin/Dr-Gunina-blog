@@ -13,8 +13,8 @@ export const mutations = {
     state.postsLoaded = posts // все посты
   },
   addPost(state, post) {
-    // console.log(post)
-    state.postsLoaded.push(post)
+    state.postsLoaded.unshift(post)
+    //state.postsLoaded.push(post)
   },
   editPost(state, postEdit) {
     const postIndex = state.postsLoaded.findIndex(post => post.id === postEdit.id)
@@ -44,7 +44,7 @@ export const actions = {
           postsArray.push({ ...res.data[key], id: key })
         }
         // res
-        commit('setPosts', postsArray)
+        commit('setPosts', postsArray.reverse())
       })
       .catch(error => console.log(error))
   },
@@ -68,7 +68,7 @@ export const actions = {
     const date = new Date(Date.now()).toLocaleString().slice(0, 10) // дата создания
     return axios.post('https://blog-a4098-default-rtdb.firebaseio.com/posts.json', {...post, date}) // тут ссылка на бд + posts.json и то, что мы передаем туда
       .then(res => {
-         console.log(res) // посмотрим что приходит в res, чтоб задать id
+         //console.log(res) // посмотрим что приходит в res, чтоб задать id
         commit('addPost', {...post, id: res.data.name}) // создадим мутацию 'addPost' и передадим ей post и id
       })
       .catch(error => console.log(error))
