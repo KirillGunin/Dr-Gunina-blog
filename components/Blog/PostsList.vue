@@ -48,4 +48,10 @@ export default {
   height: 300px;
   width: 300px;
 }
+
+@media (max-width: 479px) {
+  // .container {
+  //   max-width: auto;
+  // }
+}
 </style>

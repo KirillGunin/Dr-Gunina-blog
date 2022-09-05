@@ -63,5 +63,10 @@ export default {
   }
 }
 
+@media (max-width: 479px) {
+  .navbar-content {
+    margin: 0 15px 0;
+  }
+}
 
 </style>

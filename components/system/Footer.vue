@@ -11,7 +11,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="svg-item">
           <a href="https://dr-gunina.ru/"><img title="Книга" class="svg-book" src="@/assets/book-svgrepo-com.svg"></a>
           <a href="https://vk.com/drgunina"><img title="ВКонтакте" class="svg" src="@/assets/icons8-vk.svg"></a>
           <a href="https://t.me/drgunina"><img title="Телеграм" class="svg-tg" src="@/assets/icons8-tg.svg"></a>
@@ -79,5 +79,23 @@
   cursor: pointer;
   height: 45px;
   width: 45px;
+}
+
+@media (max-width: 479px) {
+  .footer-container {
+    margin: 0 15px 0;
+  }
+  .footer-item {
+    width: 270px;
+  }
+  .footer-link {
+    font-size: 15px;
+  }
+  .svg-item {
+    display: flex;
+  }
+  h2 {
+    font-size: 15px;
+  }
 }
 </style>
