@@ -21,6 +21,9 @@ export default {
     }
   },
   layout: 'admin',
+  mounted() {
+    this.$store.dispatch('nuxtServerInit')
+  },
   computed: {
     postsLoaded() {
       return this.$store.getters.getPostsLoaded // подгружает из бд

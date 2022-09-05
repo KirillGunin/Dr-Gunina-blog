@@ -56,12 +56,24 @@ export const actions = {
       returnSecureToken: true
     })
     .then((res) => {
-      commit('setToken', res.data.idToken)
+      const token = res.data.idToken
+      commit('setToken', token)
+      // localStorage - хранилище с пом которого можно хранить данные на клиенте
+      localStorage.setItem('token', token) // первый токен - название по которому мы будем обращаться, второе - сам токен
     })
     .catch(error => console.log(error))
   },
+  // будет проверять есть ли такой токен сейчас на клиенте
+  initAuth({commit}) {
+    const token = localStorage.getItem('token')
+    if(!token) {
+      return false
+    }
+    commit('setToken', token)
+  },
   logoutUser({commit}) {
     commit('destroyToken')
+    localStorage.removeItem('token') // удалит по ключу "токен"
   },
   // добавление поста
   addPost({commit}, post) { // связываем с файлом page/admin/new-post/index.vue
