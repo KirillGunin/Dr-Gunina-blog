@@ -20,7 +20,7 @@
 import Header from '~/components/system/Header.vue'
 export default {
   components: { Header },
-  middleware: ['auth'], // так мы обращаемся к нужному файлу в папке middleware
+  middleware: ['is-auth', 'auth'], // так мы обращаемся к нужному файлу в папке middleware
   methods: {
     logoutUser() {
       this.$store.dispatch('logoutUser')
