@@ -9,7 +9,7 @@
 
           <div class="logo">
             <img class="logoIMG" src="@/assets/logo.png">
-            <nuxt-link class="auth navbar-link" to="/admin/auth">Dr. Gunina</nuxt-link>
+            <nuxt-link class="auth-link navbar-link" to="/admin/auth">Dr. Gunina</nuxt-link>
           </div>
 
           <ul class="navbar-list">
@@ -49,8 +49,10 @@ export default {
   }
 }
 
-.auth {
+.auth-link {
   color: #909399;
+  text-align: start;
+  width: 70px;
 }
 
 .logo {
