@@ -50,3 +50,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.container {
+  flex-wrap: wrap
+}
+</style>
