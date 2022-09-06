@@ -12,13 +12,21 @@
             <nuxt-link class="auth-link navbar-link" to="/admin/auth">Dr. Gunina</nuxt-link>
           </div>
 
-          <ul class="navbar-list">
-            <!-- пройдем по массиву links указанному в экспорте -->
-            <li class="navbar-item" v-for="link in links" :key="link.title">
-              <!-- и выведем необходимые параметры -->
-              <nuxt-link class="navbar-link" :title="link.title" :to="link.url">{{link.title}}</nuxt-link>
-            </li>
-          </ul>
+          <transition name="fade" mode="out-in">
+            <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu" >menu</i>
+          </transition>
+          
+          <transition name="fade">
+            <ul class="navbar-list" v-if="show">
+              <!-- пройдем по массиву links указанному в экспорте -->
+              <li class="navbar-item" v-for="link in links" :key="link.title">
+                <!-- и выведем необходимые параметры -->
+                <nuxt-link class="navbar-link" :title="link.title" :to="link.url">{{link.title}}</nuxt-link>
+              </li>
+              <i class="material-icons clear" v-if="show" @click="show = !show" key="clear" >clear</i>
+            </ul>
+        </transition>
+        
 
         </div>
       </div>
@@ -35,13 +43,15 @@ export default {
         {title: 'Домой', url:'/'},
         {title: 'Блог', url:'/blog'},
         {title: 'О блоге', url:'/about'},
-      ]
+      ],
+      show: false
     }
   }
 }
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 .navbar-link {
   &.nuxt-link-exact-active {
@@ -66,9 +76,26 @@ export default {
 }
 
 @media (max-width: 479px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .navbar-content {
     margin: 0 15px 0;
   }
+  .navbar-list {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .navbar-item {
+    margin-right: 0px;
+    // transition: all .3s ease;
+  }
+
 }
 
 </style>
