@@ -39,3 +39,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.intro {
+  margin: 30px 0 0;
+}
+</style>

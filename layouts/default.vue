@@ -13,3 +13,12 @@ export default {
   components: { Header, Footer }
 }
 </script>
+
+<style lang="scss">
+@media (max-width: 479px) {
+  .wrapper {
+    margin: 0 10px auto;
+  }
+}
+
+</style>

@@ -34,4 +34,15 @@ export default {
   }
 }
 
+@media (max-width: 479px) {
+  .intro {
+    margin: 10px 0;
+    h2 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  }
+  
+}
+
 </style>

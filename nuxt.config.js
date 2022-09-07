@@ -28,6 +28,11 @@ export default {
     SECRET_KEY: process.env.SECRET_KEY
   },
 
+  // Global animations
+  pageTransition: {
+    name: 'fade',
+    mode: 'out-in'
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     { src: '~/assets/scss/main.scss', lang: 'scss' }

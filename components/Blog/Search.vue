@@ -45,12 +45,12 @@ svg {
   justify-content: center;
   width: 100%;
 }
-.search {
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  position: absolute;
-}
+// .search {
+//   top: 0px;
+//   bottom: 0px;
+//   left: 0px;
+//   position: absolute;
+// }
 .search-icon {
   height: 100%;
   padding-left: 16px;
@@ -68,6 +68,21 @@ input {
   font-size: 16px;
   width: 60%;
   height: auto;
+}
+
+@media (max-width: 479px) {
+  .wrapper__search {
+    margin-top: 15px;
+  }
+  .search-icon {
+    height: auto;
+    margin-top: 0;
+  }
+  
+  input {
+    height: 35px;
+    margin-top: 0px;
+  }
 }
 
 </style>

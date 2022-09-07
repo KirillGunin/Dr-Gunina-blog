@@ -46,4 +46,18 @@ export default {
     }
   }
 }
+
+@media (max-width: 479px) {
+/* стили для телефонов - начало */
+  .post-preview {
+    width: 99%;
+    height: 450px;
+    padding: 30px;
+    margin-bottom: 35px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
 </style>

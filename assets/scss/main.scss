@@ -1,6 +1,7 @@
 // тк мы к ним обращаемся везде ниже
 @import "utils/vars";
 @import "utils/reset";
+@import "utils/animations";
 
 html {
   line-height: $mainLineHeight;
@@ -88,7 +89,7 @@ section, .section {
     max-width: $phoneWidth;
   }
   @media screen and (max-width: $phoneWidth) {
-    max-width: $smPhoneWidth;
+    max-width: auto;
   }
 }
 
