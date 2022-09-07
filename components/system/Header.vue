@@ -17,8 +17,8 @@
           <!-- navbar icon -->
           <div class="burger-menu">
             <transition name="fade" mode="out-in" >
-              <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu" >menu</i>
-              <i class="material-icons clear" v-if="show" @click="show = !show" key="clear" >clear</i>
+              <img class="svg-menu" v-if="!show" @click="show = !show" src="@/assets/menu.svg">
+              <img class="svg-close-menu" v-if="show" @click="show = !show" src="@/assets/close-menu.svg">
             </transition> 
           </div>
 
@@ -70,8 +70,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
 .navbar-link {
   &.nuxt-link-exact-active {
     color: #f08c22;
@@ -174,6 +172,18 @@ export default {
   .burger-menu {
     display: flex
   }
+  .svg-menu{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    opacity: 0.75;
+  }    
+  .svg-close-menu{
+    cursor: pointer;
+    height: 30px;
+    width: 40px;
+    opacity: 0.75;
+  }  
 
   .container {
     width: 100%;

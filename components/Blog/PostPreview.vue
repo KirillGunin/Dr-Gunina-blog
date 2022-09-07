@@ -53,7 +53,7 @@ export default {
     width: 99%;
     height: 450px;
     padding: 30px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
 
   .title {

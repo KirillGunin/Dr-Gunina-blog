@@ -18,7 +18,7 @@ import promo from '@/components/Promo.vue'
 export default {
   components: { promo },
   head() {
-    let title = 'Записки мамы педиатора',
+    let title = 'Записки мамы педиатра',
         content = '',
         type = 'site'
 
