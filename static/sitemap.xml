@@ -1,17 +1,117 @@
-<!-- это пример, можно воспользоваться генератором создания карты сайта и вставить сюда -->
-
 <?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-      <loc>sitehost</loc>
-      <lastmod>2005-01-01</lastmod>
-  </url>
-  <url>
-      <loc>sitehost/about</loc>
-      <lastmod>2005-01-01</lastmod>
-  </url>
-  <url>
-      <loc>sitehost/blog</loc>
-      <lastmod>2005-01-01</lastmod>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://doctor-gunina.ru/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/about/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC7f558vo5CHSWGrVH/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC7U-1HJJESqq5kg6H/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC7EVr0SMY2XCV0so5/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC6sijmwdJYKQQFxfw/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC6WzepNcg5qzbjrcp/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC673vTXFeW-5Y1Je1/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC5PLuahBajl9dO6Nm/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC4j1rMtjWojSboa6M/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC4IsP-jx_87CvzIAg/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC3RIyS5PpW32mXxr7/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC3CKeBB_5WehWkTxX/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC1e8R8hn640rMiJdB/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC1MnmA71rDcMema-8/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC0b0hcamJqSqsEj6H/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC0GxCl3OxFyPjsbiR/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC0-fxS_9pp_QGuS0x/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC-YtkSi06cuKV9c8m/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doctor-gunina.ru/blog/-NBC-CQBJAVL6luuOF3A/</loc>
+  <lastmod>2022-09-07T10:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
