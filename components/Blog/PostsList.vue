@@ -8,11 +8,11 @@
           :admin="admin"
           :post="post" />
         <span v-if="!posts.length">
-          Вообще такого поста нет.
+          Пока такого поста нет.
           <br>
-          Но мы сообщим Вам как только он появиться.
+          Но, возможно, он скоро появится.
           <br>
-          <img class="no_posts" src="@/assets/no_posts.png">
+          <img class="no_posts" src="@/assets/img/no_post.png">
         </span>
       </div>
     </div>
@@ -47,11 +47,12 @@ export default {
   border-radius: 50%;
   height: 300px;
   width: 300px;
+  margin-top: 10px;
 }
 
 @media (max-width: 479px) {
-  // .container {
-  //   max-width: auto;
-  // }
+  span {
+    display: contents;
+  }
 }
 </style>
