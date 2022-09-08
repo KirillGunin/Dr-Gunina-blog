@@ -23,7 +23,7 @@
           </div>
 
           <!-- burger menu -->
-          <transition name="fade">
+          <transition name="slide-fade">
             <ul class="navbar-list" v-if="show">
               <!-- пройдем по массиву links указанному в экспорте -->
               <li class="navbar-item" v-for="link in links" :key="link.title">
@@ -190,6 +190,17 @@ export default {
     display: flex;
     justify-content: center;
   }
+
+  .slide-fade-enter-active {
+  transition: all .4s ease-in;
+}
+.slide-fade-leave-active {
+  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(-5px);
+  opacity: 0;
+}
 }
 
 </style>
