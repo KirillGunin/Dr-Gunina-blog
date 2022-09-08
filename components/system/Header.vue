@@ -17,13 +17,13 @@
           <!-- navbar icon -->
           <div class="burger-menu">
             <transition name="fade" mode="out-in" >
-              <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu" >menu</i>
-              <i class="material-icons clear" v-if="show" @click="show = !show" key="clear" >clear</i>
+              <img class="svg-menu" v-if="!show" @click="show = !show" src="@/assets/menu.svg">
+              <img class="svg-close-menu" v-if="show" @click="show = !show" src="@/assets/close-menu.svg">
             </transition> 
           </div>
 
           <!-- burger menu -->
-          <transition name="fade">
+          <transition name="slide-fade">
             <ul class="navbar-list" v-if="show">
               <!-- пройдем по массиву links указанному в экспорте -->
               <li class="navbar-item" v-for="link in links" :key="link.title">
@@ -70,8 +70,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
 .navbar-link {
   &.nuxt-link-exact-active {
     color: #f08c22;
@@ -174,12 +172,35 @@ export default {
   .burger-menu {
     display: flex
   }
+  .svg-menu{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    opacity: 0.75;
+  }    
+  .svg-close-menu{
+    cursor: pointer;
+    height: 30px;
+    width: 40px;
+    opacity: 0.75;
+  }  
 
   .container {
     width: 100%;
     display: flex;
     justify-content: center;
   }
+
+  .slide-fade-enter-active {
+  transition: all .4s ease-in;
+}
+.slide-fade-leave-active {
+  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(-5px);
+  opacity: 0;
+}
 }
 
 </style>

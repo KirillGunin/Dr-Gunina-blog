@@ -15,7 +15,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       //{ hid: 'description', name: 'description', content: '' },
-      // { name: 'format-detection', content: 'telephone=no' }
+      { name: 'yandex-verification', content: 'c5593d018f18d7d0' } // яндекс
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
