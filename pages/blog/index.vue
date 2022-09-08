@@ -22,7 +22,7 @@ export default {
   components: { Search },
   head() {
     let title = 'Блог',
-        content = '',
+        content = 'Тут Вы сможете найти много полезной информации.',
         type = 'site'
 
     return {
