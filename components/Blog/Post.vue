@@ -55,4 +55,7 @@ export default {
 .container {
   flex-wrap: wrap
 }
+.post-body {
+  font-weight: 600;
+}
 </style>
