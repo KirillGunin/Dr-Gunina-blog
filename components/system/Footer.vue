@@ -83,19 +83,29 @@
 
 @media (max-width: 479px) {
   .footer-container {
-    margin: 0 15px 0;
+    margin: 0 10px 0;
+    height: 100%;
   }
   .footer-item {
     width: 270px;
   }
   .footer-link {
     font-size: 15px;
+    width: 115px;
+    margin-left: 5px;
   }
+  .svg-book {
+    height: 29px;
+    width: 30px;
+    margin: 8px;
+    margin-right: 11px;
+}
   .svg-item {
     display: flex;
   }
   h2 {
     font-size: 15px;
+    width: 115px;
   }
 }
 </style>

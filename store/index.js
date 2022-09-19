@@ -1,5 +1,6 @@
 // главный файл store
 import axios from "axios";
+import Cookie from 'js-cookie'
 
 // функции
 export const state = () => ({
@@ -58,22 +59,34 @@ export const actions = {
     .then((res) => {
       const token = res.data.idToken
       commit('setToken', token)
-      // localStorage - хранилище с пом которого можно хранить данные на клиенте
+      // to localStorage - хранилище с пом которого можно хранить данные на клиенте
       localStorage.setItem('token', token) // первый токен - название по которому мы будем обращаться, второе - сам токен
+      // to cookie
+      Cookie.set('jwt', token) // 'jwt' - так принято называть ключ
     })
     .catch(error => console.log(error))
   },
   // будет проверять есть ли такой токен сейчас на клиенте
-  initAuth({commit}) {
-    const token = localStorage.getItem('token')
-    if(!token) {
-      return false
+  initAuth({commit}, req) {
+    let token
+    if(req) {
+      if(!req.headers.cookie) return false
+      const jwtCookie = req.headers.cookie
+        .split(';')
+        .find(tkn => tkn.trim().startsWith('jwt='))
+      if(!jwtCookie) return false
+      token = jwtCookie.split('=')[1]
+
+    } else {
+      token = localStorage.getItem('token')
+      if(!token) return false
     }
     commit('setToken', token)
   },
   logoutUser({commit}) {
     commit('destroyToken')
     localStorage.removeItem('token') // удалит по ключу "токен"
+    Cookie.remove('jwt')
   },
   // добавление поста
   addPost({commit}, post) { // связываем с файлом page/admin/new-post/index.vue

@@ -1,4 +1,4 @@
-<!-- Это превьюшка одного поста -->
+<!-- Это превью одного поста -->
 <!-- за :to="getLink" будет следить computed -->
 <template>
   <nuxt-link :to="getLink" class="post-preview">
@@ -52,8 +52,10 @@ export default {
   .post-preview {
     width: 99%;
     height: 450px;
-    padding: 30px;
-    margin-bottom: 20px;
+    // padding: 30px;
+    // margin-bottom: 10px;
+    padding: 20px;
+    margin-bottom: 0px;
   }
 
   .title {

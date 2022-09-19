@@ -38,7 +38,8 @@
 
 <style lang="scss">
 .wrapper-content.wrapper-content--fixed {
-  margin-top: 84px;
+  // margin-top: 84px;
+  margin-top: 80px;
 }
 
 .content {
@@ -62,10 +63,10 @@ img {
   width: 100%;
 }
 
-@media (max-width: 479px) {
-  img {
-    max-height: 290px;
-    width: auto;
-  }
-}
+// @media (max-width: 479px) {
+//   img {
+//     max-height: 300px;
+//     width: auto;
+//   }
+// }
 </style>
