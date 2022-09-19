@@ -47,7 +47,7 @@ export default {
   text-align: center;
   margin-bottom: 30px;
   img {
-    max-width: 400px;
+    max-width: 370px;
     margin-bottom: 16px;
     border-radius: 5px;
   }

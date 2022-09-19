@@ -77,7 +77,17 @@ export default {
   // height: 70vh;
   margin: 10em auto 10em;
   input {
-    min-width: 400px;
+    // min-width: 400px;
+    width: 350px;
   }
+}
+
+@media (max-width: 479px) {
+  .auth__form {
+    input {
+      width: 300px;
+    }
+  }
+  
 }
 </style>

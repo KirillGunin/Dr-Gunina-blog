@@ -89,7 +89,8 @@ section, .section {
     max-width: $phoneWidth;
   }
   @media screen and (max-width: $phoneWidth) {
-    max-width: auto;
+    max-width: $smPhoneWidth;
+    overflow-x: hidden; // это мое
   }
 }
 

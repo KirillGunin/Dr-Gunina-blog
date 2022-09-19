@@ -11,7 +11,7 @@
           <!-- navbar logo -->
           <div class="logo">
             <img class="logoIMG" src="@/assets/logo.png">
-            <nuxt-link class="auth-link navbar-link" to="/admin/auth">Dr. Gunina</nuxt-link>
+            <nuxt-link class="auth-link navbar-link" to="/admin">Dr. Gunina</nuxt-link>
           </div>
 
           <!-- navbar icon -->
@@ -108,7 +108,8 @@ export default {
   .navbar-content {
     display: flex;
     justify-content: space-between;
-    margin: 0 10px 0;
+    // margin: 0 10px 0;
+    margin: 0 auto;
     width: 100%;
     flex-wrap: wrap;
   }
@@ -117,7 +118,8 @@ export default {
     height: 96px;
     justify-content: space-evenly;
     width: 100%;
-    margin: 10px 0 -9px 0;
+    // margin: 10px 0 -9px 0;
+    margin: 10px 0 0px;
     opacity: 0.9;
   }
   .navbar-item {

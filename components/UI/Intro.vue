@@ -29,6 +29,9 @@ export default {
   color: #ffffff;
   background-color: #e69d4b;
   border-radius: 5px;
+  .container {
+    flex-wrap: wrap;
+  }
   h2 {
     font-size: 40px;
   }
@@ -40,6 +43,7 @@ export default {
     h2 {
     font-size: 25px;
     font-weight: bold;
+    width: 100%;
   }
   }
   
